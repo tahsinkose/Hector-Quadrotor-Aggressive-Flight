@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 set (CMAKE_CXX_STANDARD 11)
-project(hector_moveit_actions)
+project(hector_aggressive_flight)
 
 find_package(catkin REQUIRED COMPONENTS roscpp actionlib actionlib_msgs geometry_msgs hector_uav_msgs)
 
