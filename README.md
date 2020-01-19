@@ -11,7 +11,7 @@ It is assumed that Hector Quadrotor stack is properly built in the environment. 
 
 2- Run in the second terminal:
 
-`rosrun hector_aggressive_flight trajectory_controller`
+`roslaunch hector_aggressive_flight trajectory_controller.launch`
 
 Program is tested in Ubuntu 16.04 with ROS Kinetic. Nonetheless, other frameworks would not possess a problem.
 
