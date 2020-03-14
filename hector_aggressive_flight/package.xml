@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>hector_aggressive_flight</name>
+  <name>starmac</name>
   <version>0.0.0</version>
-  <description>The hector_aggressive_flight package</description>
+  <description>The starmac package</description>
 
   <maintainer email="tahsincankose@gmail.com">Tahsincan Köse</maintainer>
   <license>BSD</license>
