@@ -3,7 +3,9 @@
 <launch>
 
   <node name="trajectory_controller" pkg="starmac" type="trajectory_controller" respawn="false" output="screen"/>
-  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find starmac)/cfg/aggressive_flight.rviz"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find starmac)/cfg/aggressive_flight.rviz">
+    <remap from="/odometry" to="/ground_truth/state"/>
+  </node>
 
 
 </launch>
