@@ -22,8 +22,8 @@ typedef actionlib::SimpleActionClient<hector_uav_msgs::LandingAction> LandingCli
 class AggressiveTrajectoryTracker {
  public:
   AggressiveTrajectoryTracker() {
-    pose_client_.reset(new PoseClient("/action/pose", true));
-    landing_client_.reset(new LandingClient("/action/landing", true));
+    pose_client_.reset(new PoseClient("action/pose", true));
+    landing_client_.reset(new LandingClient("action/landing", true));
     pose_client_->waitForServer();
     landing_client_->waitForServer();
     // Advertise cmd_vel topic to give velocity commands. Note that given 3.0 m/s in x direction does
@@ -31,7 +31,7 @@ class AggressiveTrajectoryTracker {
     // fact, these are acceleration commands. In other applications, they may be negligible, but in
     // this case they are not since aggressive flight requires ultimate obedience to the computed
     // velocities. Therefore, this is an open-loop algorithm.
-    pub_vel_ = nh_.advertise<geometry_msgs::Twist>("/cmd_vel", 10);
+    pub_vel_ = nh_.advertise<geometry_msgs::Twist>("cmd_vel", 10);
   }
   void run() {
     std::vector<geometry_msgs::Pose> trajectory = starmac::createPattern("SQUARE");
